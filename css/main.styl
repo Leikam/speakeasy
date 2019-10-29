@@ -1,0 +1,205 @@
+$block-x-padding = 54px;
+$block-y-padding = 54px;
+$text-y-margin = 34px;
+$main-column-maxw = 1280px;
+$main-column-minw = 760px;
+$fs-base = 15px;
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-size: $fs-base;
+	min-height: 100%;
+	line-height: 1.35;
+	font-family: 'Verdana', sans-serif;
+	background: #1b1d24 url("../img/stars_pattern.jpeg") repeat;
+	background-size: cover;
+}
+
+.header {
+	margin: auto;
+	max-width: $main-column-maxw;
+	min-width: $main-column-minw;
+	padding-bottom: 300px;
+	background: transparent url("../img/everest.jpg") no-repeat;
+	background-size: cover;
+}
+
+.content,
+.video_player {
+	box-sizing: border-box;
+	max-width: $main-column-maxw;
+	min-width: $main-column-minw;
+}
+
+.content {
+	margin: $text-y-margin auto;
+	padding: $block-y-padding $block-x-padding;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Video */
+.video {
+	position: relative;
+	text-align: center;
+	background-color: #000;
+}
+
+.video_player {
+	padding: 72px $block-x-padding;
+	margin: auto;
+	width: 100%;
+}
+
+.video_player_obj {
+	width: 100%;
+	outline-color: transparent;
+}
+
+/* /Video */
+.description {
+	text-align: center;
+	margin: $text-y-margin 0;
+}
+
+.description:first-child {
+	margin-top: 0;
+}
+
+.description:last-child {
+	margin-bottom: 0;
+}
+
+.description_head {
+	margin: $text-y-margin 0 8px;
+}
+
+.content_poster {
+	margin-left: -($block-x-padding);
+	margin-right: -($block-x-padding);
+	background-image: url("../img/asset3.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.content_poster_img {
+	width: 100%;
+	visibility: hidden;
+	display: block;
+}
+
+.timetable_header {
+	font-size: $fs-base;
+	margin-top: 0;
+}
+
+.timetable_list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.timetable_list_i {
+	display: flex;
+	margin: auto;
+	width: 60%;
+	max-width: 65%;
+}
+
+.timetable_list_i_txt {
+	width: 33.3%;
+	margin: 4px 0;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.timetable_list_i_txt.__time {
+	text-align: center;
+}
+
+.timetable_list_i_txt.__divider {
+	text-align: center;
+	flex-grow: 0;
+	flex-basis: 32px;
+}
+
+.timetable_list_i_txt.__description {
+	text-align: right;
+	min-width: 0;
+	flex-basis: 50%;
+}
+
+/* Content footer
+---------------------------------------------------------------------------------- */
+.footer_logo {
+	display: block;
+	margin: auto;
+	width: 50%;
+}
+
+.footer_text {
+	font-size: 0;
+}
+
+.footer_text_contacts {
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	padding: 0 24px;
+	box-sizing: border-box;
+	font-size: $fs-base;
+}
+  .footer_text_contacts.__phone {
+      text-align: right;
+  }
+  .footer_text_contacts.__email {
+      text-align: left;
+  }
+
+/* /Content footer
+---------------------------------------------------------------------------------- */
+.-g-colorize {
+	color: #ff0;
+}
+
+.-g-uppercase {
+	text-transform: uppercase;
+}
+
+.-g-bold {
+	font-weight: bold;
+}
+
+.-g-spread-text {
+	line-height: 28px;
+}
+
+.-g-fsize-q05 {
+	font-size: 1.125em;
+}
+
+.-g-fsize-q1 {
+	font-size: 1.25em;
+}
+
+.-g-fsize-q2 {
+	font-size: 1.5em;
+}
+
+.-g-fsize-q3 {
+	font-size: 1.75em;
+}
+
+.-g-fsize-q4 {
+	font-size: 2em;
+}
+
+#root .aria-hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
