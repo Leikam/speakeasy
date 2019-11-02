@@ -109,7 +109,7 @@ body {
 .footer_logo {
   display: block;
   margin: auto;
-  width: 50%;
+  width: 48%;
 }
 .footer_text {
   font-size: 0;
@@ -121,6 +121,7 @@ body {
   padding: 0 24px;
   box-sizing: border-box;
   font-size: 15px;
+  text-align: center;
 }
 .footer_text_contacts.__phone {
   text-align: right;
