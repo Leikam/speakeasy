@@ -25,6 +25,7 @@ body {
 	min-height: 100%;
 	font: normal $fs-base/1.45 'Gill Sans', Tahoma, Verdana, sans-serif;
 	background: $color-bg url("../img/Back.png") repeat;
+	background-size: contain;
 	color: $font-color;
 }
 
@@ -32,7 +33,13 @@ body {
 	min-width $main-column-minw;
 	}
 
-.header {}
+.header,
+.content_wrapper,
+.video_player {
+	max-width: $main-column-maxw;
+	min-width: $main-column-minw;
+	margin: auto;
+	}
 	.header:before {
 		content '';
 		display block;
@@ -43,15 +50,11 @@ body {
 
 .content_wrapper,
 .video_player {
-	max-width: $main-column-maxw;
-	min-width: $main-column-minw;
 	padding-left: $aside-spacing;
 	padding-right: @padding-left;
 	box-sizing border-box;
-	margin: auto;
 }
 
-.header,
 .content,
 .footer {
 	width: 100%
