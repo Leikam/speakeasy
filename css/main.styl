@@ -23,30 +23,70 @@ body {
 	margin: 0;
 	font-size: $fs-base;
 	min-height: 100%;
-	font: normal $fs-base/1.45 'Gill Sans', Heiti, Tahoma, Verdana, sans-serif;
+	font: normal $fs-base/1.45 'Gill Sans', Calibri, Tahoma, Verdana, sans-serif;
 	background: $color-bg url("../img/Back.png") repeat;
-	background-size: contain;
+	background-size: 322px 316px;
 	color: $font-color;
+	-webkit-font-smoothing: antialiased;
+}
+/* Gill Sans not support 'garumzimes' */
+html.__lv body {
+	font: normal $fs-base/1.45 Calibri, Tahoma, Verdana, sans-serif;
+	}
+
+a {
+	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .wrapper {
 	min-width $main-column-minw;
 	}
 
-.header,
+.header {
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+	}
+	.header:before {
+		content '';
+		display block;
+		padding-bottom: (1487/19.20)%
+		background-color: transparent;s
+		background-image: url("../img/Logo.png"), url("../img/Gradient.png"), url("../img/Head.jpg");
+		background-repeat: no-repeat;
+		background-size: 50% 50%, contain, contain;
+		background-position: 50% 74%, 50% 100%, 0 0;
+	}
+
+	.header_langs {
+		position: absolute;
+		top: 24px;
+		left: 0;
+		right: 0;
+		text-align center;
+		}
+		.header_langs_link {
+			font-size: 14px;
+			display: inline-block;
+			padding: 8px 8px;
+			margin: 0 8px;
+			color: currentColor;
+			border-radius: 50px;
+			background: #1A1E1F;
+			}
+			.header_langs_link:hover {
+				color: #C23229;
+				background: white;
+				transition: background-color .15s ease-in 0s, color .1s ease-in 0s;
+			}
+
 .content_wrapper,
 .video_player {
 	max-width: $main-column-maxw;
 	min-width: $main-column-minw;
 	margin: auto;
 	}
-	.header:before {
-		content '';
-		display block;
-		padding-bottom: (799/$maxwidth-coef)%
-		background: transparent url("../img/Head-jpg.jpg") no-repeat;
-		background-size: 100%;
-		}
 
 .content_wrapper,
 .video_player {
@@ -139,7 +179,7 @@ body {
 .content_poster {
 	margin-left: -($block-x-padding);
 	margin-right: -($block-x-padding);
-	background-image: url("../img/asset3.jpg");
+	background-image: url("../img/asset3.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 }

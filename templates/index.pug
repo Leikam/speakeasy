@@ -1,0 +1,88 @@
+doctype html
+html(lang=lang class="__" + lang id="root")
+    head
+        meta(charset='UTF-8')
+        title=pageTitle
+        link(rel="stylesheet" href="css/main.min.css")
+    body
+        .wrapper
+            .header
+                .header_langs
+                    if lang !== 'lv'
+                        a.header_langs_link(href="index.html") LV
+                    if lang !== 'ru'
+                        a.header_langs_link(href="index-ru.html") РУС
+                    if lang !== 'en'
+                        a.header_langs_link(href="index-en.html") ENG
+                h1.aria-hidden= h1
+
+            .video
+                .video_player
+                    video(
+                        class="video_player_obj"
+                        poster="img/Logo.png"
+                        controls
+                        playsinline
+                    )
+                        source(src="img/bager.mp4" type="video/mp4")
+
+                .video-decor-foot
+
+            .content_wrapper
+                .content
+                    article(class="description  __emphased -g-colorize -g-spread-text -g-fsize-q1")
+                        .description_text= headText1
+                        .description_text= headText2
+                        .description_text= headText3
+
+                    each descrItem in descriptionBlock1
+                        article.description
+                            .description_text= descrItem
+
+                    article(class="description __emphased -g-fsize-q4")
+                        .description_text= descriptionTexts[0]
+
+                    article.description
+                        .description_text= descriptionTexts[1]
+
+                    article.description
+                        div(class="description_text -g-bold -g-fsize-q1")= descriptionTexts[2]
+
+                    .content_poster
+                        img.content_poster_img(src="img/asset3.png", alt="santa")
+
+                    .description
+                        .timetable
+                            h2.timetable_header= timetableHeader
+                            ul.timetable_list
+                                each timetableItem in timetableList
+                                    li.timetable_list_i
+                                        div(class="timetable_list_i_txt __time")= timetableItem.time
+                                        div(class="timetable_list_i_txt __divider")="–"
+                                        div(class="timetable_list_i_txt __description")= timetableItem.descr
+
+                    each pricesItem in pricesList
+                        .description
+                            div(class="description_head -g-uppercase -g-colorize")
+                                | #{pricesItem.descr}
+                                span= pricesItem.price
+                            .description_text= pricesItem.longDescr
+
+                    each infoItem in infoList
+                        .description
+                            div(class="description_head -g-uppercase")= infoItem.head
+                            .description_text= infoItem.body
+
+                    .description
+                        div(class="description_head -g-fsize-q2")= contentEndingText
+
+                .footer
+                    img(src="img/tickets.png" height="86" alt="Tickets" class="footer_logo")
+                    .footer_text
+                        .footer_text_contacts.__phone
+                            span.footer_text_contacts_txt= phoneNumber
+                        .footer_text_contacts.__email
+                            span.footer_text_contacts_txt= email
+
+
+
