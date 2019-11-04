@@ -22,7 +22,8 @@ html(lang=lang class="__" + lang id="root")
                         class="video_player_obj"
                         poster="img/Logo.png"
                         controls
-                        playsinline
+                        autobuffer
+                        preload
                     )
                         source(src="img/bager.mp4" type="video/mp4")
 
@@ -30,7 +31,7 @@ html(lang=lang class="__" + lang id="root")
 
             .content_wrapper
                 .content
-                    article(class="description  __emphased -g-colorize -g-spread-text -g-fsize-q1")
+                    article(class="description  __head-text -g-colorize -g-fsize-q1")
                         .description_text= headText1
                         .description_text= headText2
                         .description_text= headText3
@@ -39,7 +40,7 @@ html(lang=lang class="__" + lang id="root")
                         article.description
                             .description_text= descrItem
 
-                    article(class="description __emphased -g-fsize-q4")
+                    article(class="description -g-fsize-q4")
                         .description_text= descriptionTexts[0]
 
                     article.description
